@@ -1,7 +1,7 @@
 {
-  "name": "AstroGalaxy Support",
+  "name": "astrogalaxysupport",
   "version": "1.0.0",
-  "description": "Astrogalaxy bot.",
+  "description": "Astro bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
