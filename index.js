@@ -30,10 +30,14 @@ fs.readdir("./commands/", (err, files) => {
 })
 
 
+
 bot.on("ready", async () => {
-	console.log(`${bot.user.username} is online!`)
-	
-})
+  console.log(`${bot.user.username} has successfully started`);
+  bot.user.setActivity("AstroGalaxy.net", {type: "PLAYING"});
+
+  //bot.user.setGame("Security Check!");
+
+});
 
 bot.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome');
