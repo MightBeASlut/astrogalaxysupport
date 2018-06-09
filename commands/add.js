@@ -9,8 +9,8 @@ module.exports.run = async (bot, message, args) => {
         if(user) {
 
             let addembed = new Discord.RichEmbed()
-            .setTitle("User Added!")
-            .setColor("#00ff00")
+            .setTitle("User Toegevoegd!")
+            .setColor("#ffffff")
             .setDescription(`Name: ${user}`)
             .setTimestamp()
             .setFooter(`©AstroGalaxy`, "https://i.imgur.com/E5x69Sn.png");
