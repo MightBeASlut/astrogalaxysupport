@@ -3,6 +3,9 @@ const Discord = require("discord.js")
 
 
 module.exports.run = async (bot, message, args) => {
+    let channel = message.channel;
+    let cName = channel.name;
+    if(cName.startsWith("overige-commands")) {
 
     const reason = message.content.split(" ").slice(1).join(" ");
     if (message.guild.channels.exists("name", `help-${message.author.username.toLowerCase()}`)) return message.channel.send(`Je hebt momenteel al een ticket open`);
@@ -57,7 +60,11 @@ module.exports.run = async (bot, message, args) => {
 
 
 
-    
+} else {
+    return ("Je kan dit alleen in <#455097311715131402> uitvoeren!").then(msg => {
+        msg.delete(5000)
+      })
+}
 }
 
 module.exports.help = {
