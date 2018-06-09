@@ -87,7 +87,7 @@ bot.on('message', message => {
 
     let linkembed = new Discord.RichEmbed()
     .setColor("#ffffff")
-    .addField(`Discord Console`,`${message.author} probeer **${message}** te sturen!`)
+    .addField(`Discord Console`,`${message.author} probeert **${message}** te sturen!`)
     .setTimestamp()
     .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
 
@@ -115,6 +115,16 @@ if (msg.includes(`HITLER`)) {
 }
 
 if (msg.includes(`KANKER`)) {
+ message.delete();
+ logs.send(logsembed)
+
+}
+if (msg.includes(`K3NKER`)) {
+ message.delete();
+ logs.send(logsembed)
+
+}
+if (msg.includes(`KANK`)) {
  message.delete();
  logs.send(logsembed)
 
