@@ -16,6 +16,9 @@ module.exports.run = async (bot, message, args, member, guild, size) => {
     }
 
     if (channelName.startsWith(`suggestions`)) {
+    if(!message.content.startsWith("-suggest")) {
+	    message.delete()
+    }
     var args = msg.split(" ")
     let suggestion = args.join(" ").slice(9);
     if (!args[1]) {
