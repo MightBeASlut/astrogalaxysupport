@@ -5,6 +5,12 @@ const Discord = require("discord.js")
 module.exports.run = async (bot, message, args) => {
     let channel = message.channel;
     let cName = channel.name;
+    if(!cName.startsWith("overige-commands")) { 
+        message.reply("Alleen in <#455097311715131402> -help gebruiken aub!")
+        .then(msg => {
+            msg.delete(5000)
+          })
+    }
     if(cName.startsWith("overige-commands")) {
 
     const reason = message.content.split(" ").slice(1).join(" ");
@@ -41,7 +47,7 @@ module.exports.run = async (bot, message, args) => {
 
         let tcreateembed = new Discord.RichEmbed()
         .setTitle("ForestMC Ticket")
-        .setColor(0xCF40FA)
+        .setColor(`#fffff`)
         .addField(`Support Ticket`,`${c}`)
         .addField(`Hoe ga ik naar mijn support ticket?`, `Klik op ${c}`)
         .setTimestamp()
@@ -50,8 +56,8 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send({embed: tcreateembed});
 
         const embed = new Discord.RichEmbed()
-        .setColor(0xCF40FA)
-        .addField(`Hey ${message.author.username}!`, `Graag uw vraag stellen zodat wij z.s.m. kunnen antwoorden!?`)
+        .setColor(`#fff`)
+        .addField(`Hey ${message.author.username}!`, `Graag uw vraag stellen zodat wij z.s.m. kunnen antwoorden!`)
         .setTimestamp()
         .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png")
         c.send({ embed: embed });
@@ -60,8 +66,6 @@ module.exports.run = async (bot, message, args) => {
 
 
 
-} else {
-    return (`Je kan dit alleen in <#455097311715131402> uitvoeren!`)
 }
 }
 
