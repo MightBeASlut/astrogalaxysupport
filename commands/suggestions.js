@@ -2,27 +2,14 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args, member, guild, size) => {
     let channel = message.channel;
-    let channelName = message.channel.name
+
     let prefix = "-";
     var msg = message.content;
-
-
-    if (!channelName.startsWith(`suggestions`)) {
-        message.delete()
-        message.channel.send(`You can only add suggestions in the suggestions channel.`) 
-        .then(msg => {
-         msg.delete(5000)
-       });
-    }
-
-    if (channelName.startsWith(`suggestions`)) {
-        if(!message.content.startsWith("-suggest")){
-            msg.delete()
-            }
-
     var args = msg.split(" ")
     let suggestion = args.join(" ").slice(9);
-    if (!args[1]) {
+   if(!message.channel.id === "channel id ") return message.channel.send("Wrong channel"); 
+   
+if (!args[0]) {
         message.delete()
         message.author.send("Correct usage: -suggest *suggestion here*");
     }
