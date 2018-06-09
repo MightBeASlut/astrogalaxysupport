@@ -3,7 +3,6 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args, member, guild, size) => {
     let channel = message.channel;
 
-    let prefix = "-";
     var msg = message.content;
     var args = msg.split(" ")
     let suggestion = args.join(" ").slice(9);
