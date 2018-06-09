@@ -5,19 +5,19 @@ const Discord = require("discord.js")
 module.exports.run = async (bot, message, args) => {
 
     const reason = message.content.split(" ").slice(1).join(" ");
-    if (message.guild.channels.exists("name", `support-${message.author.username.toLowerCase()}`)) return message.channel.send(`You already have a support ticket open.`);
+    if (message.guild.channels.exists("name", `help-${message.author.username.toLowerCase()}`)) return message.channel.send(`Je hebt momenteel al een ticket open`);
 
     message.guild.createChannel(`support-${message.author.username}`, "text").then(c => {
-        let category = message.guild.channels.find("name", "Tickets");
+        let category = message.guild.channels.find("name", "🎫 Tickets");
         if(category) {
             c.setParent(category)
              .then(updated => console.log(`Set the category of ${channel.name} to ${channel.parent.name}`))
             .catch(console.error);
-           } else message.reply("Category could not be found.")
+           } else message.reply("Category niet vindbaar.")
            .then(msg => {
             msg.delete(5000)
           })
-        let role = message.guild.roles.find("name", "Support Team");
+        let role = message.guild.roles.find("name", "Forest Support");
         let role2 = message.guild.roles.find("name", "@everyone");
 
 
@@ -37,20 +37,20 @@ module.exports.run = async (bot, message, args) => {
         });
 
         let tcreateembed = new Discord.RichEmbed()
-        .setTitle("AstroGalaxy Support")
+        .setTitle("ForestMC Ticket")
         .setColor(0xCF40FA)
         .addField(`Support Ticket`,`${c}`)
-        .addField(`How can I go to my support ticket?`, `Click on ${c}`)
+        .addField(`Hoe ga ik naar mijn support ticket?`, `Klik op ${c}`)
         .setTimestamp()
-        .setFooter(`©AstroGalaxy`, "https://i.imgur.com/E5x69Sn.png");
+        .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png")
       
         message.channel.send({embed: tcreateembed});
 
         const embed = new Discord.RichEmbed()
         .setColor(0xCF40FA)
-        .addField(`Hey ${message.author.username}!`, `What is your question/problem?`)
+        .addField(`Hey ${message.author.username}!`, `Graag uw vraag stellen zodat wij z.s.m. kunnen antwoorden!?`)
         .setTimestamp()
-        .setFooter(`©AstroGalaxy`, "https://i.imgur.com/E5x69Sn.png");
+        .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png")
         c.send({ embed: embed });
 
     })
@@ -61,5 +61,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "support"
+	name: "help"
 }
