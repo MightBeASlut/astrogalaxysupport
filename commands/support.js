@@ -61,7 +61,8 @@ module.exports.run = async (bot, message, args) => {
 
 
 } else {
-    return ("Je kan dit alleen in <#455097311715131402> uitvoeren!").then(msg => {
+    return (`Je kan dit alleen in <#455097311715131402> uitvoeren!`)
+    .then(msg => {
         msg.delete(5000)
       })
 }
