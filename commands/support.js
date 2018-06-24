@@ -5,8 +5,8 @@ const Discord = require("discord.js")
 module.exports.run = async (bot, message, args) => {
     let channel = message.channel;
     let cName = channel.name;
-    if(!cName.startsWith("overige-commands")) { 
-        message.reply("Alleen in <#455097311715131402> -help gebruiken aub!")
+    if(!cName.startsWith("support")) { 
+        message.reply("Alleen in <#448932698107674644> -help gebruiken aub!")
         .then(msg => {
             msg.delete(5000)
           })
