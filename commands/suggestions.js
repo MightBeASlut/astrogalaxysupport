@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Suggestie", `${suggestion}`)
     .setColor("#ffffff")
     .setTimestamp()
-    .setFooter(`©ForestMC`, "https://imgur.com/04b2xVG.png");
+    .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
 	
     let suggestions = message.guild.channels.find("name", "suggestions");
 
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Discord.RichEmbed()
     .setColor("#ffffff")
     .addField('Discord Console', `${message.author} heeft een nieuwe suggestie gemaakt!`)
-    .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png")
+    .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
     .setTimestamp();
 
     logs.sendEmbed(embed);
