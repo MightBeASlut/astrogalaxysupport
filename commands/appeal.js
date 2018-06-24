@@ -45,7 +45,7 @@ module.exports.run = async (bot, message) => {
             .setTitle("AstroGalaxy Support")
             .setColor("#ffffff")
             .addField(`${sort} Appeal Ticket`,`${channel}`)
-            .addField(`War is mijn appeal ticket?`, `Klik op ${channel}`)
+            .addField(`Waar is mijn appeal ticket?`, `Klik op ${channel}`)
             .setTimestamp()
             .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
           
