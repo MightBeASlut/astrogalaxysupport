@@ -58,7 +58,7 @@ module.exports.run = async (bot, message) => {
                     .setDescription(`
                     ** »Dit is het formaat voor uw appeal. Als u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \n \n- Wat is de naam van uw Minecraft IGN? \n- Waarom bent u uit ForestMC verbannen? \n- Wie heeft u verbannen? \n- je bent verbannen voor meerdere waarschuwingen, waarom zouden we je unbannen? \n- Als je verbannen werd voor hacken, waarom zouden we je uitbannen? \n- Als je om een andere reden bent gebanned, vertel ons dan waarom we je moeten ontbinden?\n
 - Als u hackt, heeft u uw hacks dan gedeïnstalleerd? \n- Hebt u ooit gedoneerd op de server, zo ja, wat heeft u gekocht? \n- Bent u ooit eerder gestraft op de server? \n
-- Hebt u ooit eerder personeel op de server geweest, zo ja, in welke rank was je? \n- Is er nog iets dat we moeten weten?`)
+- Bent u ooit eerder personeel op de server geweest, zo ja, in welke rank was je? \n- Is er nog iets dat we moeten weten?`)
                     .setTimestamp()
                     .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
                 channel.send({embed: appealone});
