@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
    let suggestion = args.join(" ");
-   if(message.channel.id !== "449924263659438090") return message.channel.send("Wrong channel");
-  if(!args[0] || args[0] === "help") return message.channel.send(" -suggestion <suggestion>");
+   if(message.channel.id !== "455097311715131402") return message.channel.send("Verkeerde channel");
+  if(!args[0] || args[0] === "help") return message.channel.send(" -suggestion <suggestie>");
 
     let suggestionEmbed = new Discord.RichEmbed()
     .setDescription(`Nieuwe suggestie van: ${message.author}`)
@@ -12,9 +12,11 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#ffffff")
     .setTimestamp()
     .setFooter(`©ForestMC`, "https://imgur.com/04b2xVG.png");
+	
+    let suggestions = message.guild.channels.find("name", "suggestions");
 
     message.delete()
-    message.channel.send({embed: suggestionEmbed}).then(async function (message) {
+    suggestions.sendEmbed(suggestionEmbed).then(async function (message) {
 		await message.react("✅")
 		await message.react("❌")
     }).catch(function() {})
