@@ -43,9 +43,9 @@ module.exports.run = async (bot, message) => {
 
             let tcreateembed = new Discord.RichEmbed()
             .setTitle("AstroGalaxy Support")
-            .setColor("#fffff")
+            .setColor("#ffffff")
             .addField(`${sort} Appeal Ticket`,`${channel}`)
-            .addField(`How can I go to my appeal ticket?`, `Click on ${channel}`)
+            .addField(`War is mijn appeal ticket?`, `Klik op ${channel}`)
             .setTimestamp()
             .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
           
@@ -56,7 +56,9 @@ module.exports.run = async (bot, message) => {
                     .setColor("#ffffff")
                     .setTitle(`Hey ${message.author.username}!`)
                     .setDescription(`
-                    ** »Dit is het formaat voor uw appeal. Als u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \ n \ n- Wat is de naam van uw Minecraft IGN? \ N- Waarom bent u uit ForestMC verbannen? \ N- Wie heeft u verbannen? \ N- je bent verbannen voor meerdere waarschuwingen, waarom zouden we je unbannen? \ n- Als je verbannen werd voor hacken, waarom zouden we je uitbannen? \ n- Als je om een andere reden bent gebanned, vertel ons dan waarom we je moeten ontbinden? n- Als u hackt, heeft u uw hacks dan gedeïnstalleerd? \ n- Hebt u ooit gedoneerd op de server, zo ja, wat heeft u gekocht? \ n- Bent u ooit eerder gestraft op de server? \ n- Hebt u ooit eerder personeel op de server geweest, zo ja, in welke rank was je? \ n- Is er nog iets dat we moeten weten?`)
+                    ** »Dit is het formaat voor uw appeal. Als u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \n \n- Wat is de naam van uw Minecraft IGN? \n- Waarom bent u uit ForestMC verbannen? \n- Wie heeft u verbannen? \n- je bent verbannen voor meerdere waarschuwingen, waarom zouden we je unbannen? \n- Als je verbannen werd voor hacken, waarom zouden we je uitbannen? \n- Als je om een andere reden bent gebanned, vertel ons dan waarom we je moeten ontbinden?\n
+- Als u hackt, heeft u uw hacks dan gedeïnstalleerd? \n- Hebt u ooit gedoneerd op de server, zo ja, wat heeft u gekocht? \n- Bent u ooit eerder gestraft op de server? \n
+- Hebt u ooit eerder personeel op de server geweest, zo ja, in welke rank was je? \n- Is er nog iets dat we moeten weten?`)
                     .setTimestamp()
                     .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
                 channel.send({embed: appealone});
@@ -67,7 +69,9 @@ module.exports.run = async (bot, message) => {
                     .setColor("#ffffff")
                     .setTitle(`Hey ${message.author.username}!`)
                     .setDescription(`
-             ** »Dit is het formaat voor uw appeal. Wanneer u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \ n \ n- Wat is de naam van uw Minecraft IGN? \ N- Hoe lang bent u tijdelijk verbannen? \ N- Waarom was u tijdelijk verbannen op ForestMC? \ n- Wie heeft je tijdelijk verbannen? \ n- Als je voor meerdere delicten tijdelijk bent geblokkeerd, waarom zouden we je uitbannen? \ n- Heb je ooit gedoneerd op de server, zo ja, wat heb je gekocht ? \ n- Bent u ooit eerder op de server gestraft? \ n- Bent u ooit eerder personeel op de server geweest, zo ja, in welke rang was u? \ n- Is er nog iets dat we moeten weten? \ n`)
+             ** »Dit is het formaat voor uw appeal. Wanneer u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \n \n- Wat is de naam van uw Minecraft IGN? \n
+- Hoe lang bent u tijdelijk verbannen? \n- Waarom was u tijdelijk verbannen op ForestMC? \n- Wie heeft je tijdelijk verbannen? \n
+- Als je voor meerdere delicten tijdelijk bent geblokkeerd, waarom zouden we je uitbannen? \n- Heb je ooit gedoneerd op de server, zo ja, wat heb je gekocht ? \n- Bent u ooit eerder op de server gestraft? \n- Bent u ooit eerder personeel op de server geweest, zo ja, in welke rang was u? \n- Is er nog iets dat we moeten weten? \n`)
                     .setTimestamp()
                     .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
                 channel.send({embed: appealtwo});
@@ -78,7 +82,8 @@ module.exports.run = async (bot, message) => {
                     .setColor("#ffffff")
                     .setTitle(`Hey ${message.author.username}!`)
                     .setDescription(`
-** »Dit is het formaat voor uw appeal. Wanneer u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \ n \ n- Wat is de naam van uw Minecraft IGN? \ N- Waarom was u gemuted op ForestMC? \ N- Wie heeft u gemuted, Als je het niet weet laat je het leeg)? \ n- Als u gemuted bent voor meerdere keren, waarom zouden we u dan unmuten? \ n- Heeft u ooit gedoneerd op de server, zo ja, wat heeft u gekocht? \ n- Hebt u ooit eerder gestraft op de server? \ n- Bent u ooit eerder personeel op de server geweest, zo ja, in welke rang was u? \ n- Is er nog iets dat we moeten weten? \ n
+** »Dit is het formaat voor uw appeal. Wanneer u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \n \n
+- Wat is de naam van uw Minecraft IGN? \n- Waarom was u gemuted op ForestMC? \n- Wie heeft u gemuted, Als je het niet weet laat je het leeg)? \n- Als u gemuted bent voor meerdere keren, waarom zouden we u dan unmuten? \n- Heeft u ooit gedoneerd op de server, zo ja, wat heeft u gekocht? \n- Hebt u ooit eerder gestraft op de server? \n- Bent u ooit eerder personeel op de server geweest, zo ja, in welke rang was u? \n- Is er nog iets dat we moeten weten? \n
                     `)
                     .setTimestamp()
                     .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
