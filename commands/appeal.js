@@ -5,6 +5,7 @@ module.exports.run = async (bot, message) => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     let sort = args.join(" ");
+    let channel = message.channel;
 
     if(args[0] !== "mute" && args[0] !== "ban" && args[0] !== "tempban"){
         return message.channel.send("Available appeals are: Ban, Mute, Tempban!\nUsage: -appeal [appeal sort]")
@@ -14,7 +15,7 @@ module.exports.run = async (bot, message) => {
         message.guild.createChannel(`appeal-${message.author.username}`, "text").then(channel => {
         let category = message.guild.channels.find("name", "🎫 Tickets");
         if(category) {
-            c.setParent(category)
+            channel.setParent(category)
              .then(updated => console.log(`Set the category of ${channel.name} to ${channel.parent.name}`))
             .catch(console.error);
            } else message.reply("Category niet vindbaar.")
