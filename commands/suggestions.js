@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
    let suggestion = args.join(" ");
-   if(message.channel.id !== "455097311715131402") return message.channel.send("Verkeerde channel");
+   if(message.channel.id !== "460426915677732865") return message.channel.send("Suggesteer suggesties in <#460426915677732865>!");
   if(!args[0] || args[0] === "help") return message.channel.send(" -suggestion <suggestie>");
 
     let suggestionEmbed = new Discord.RichEmbed()
