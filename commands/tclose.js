@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   let cName = channel.name;
 
     let channelName = message.channel.name
-    if(cName.startsWith("appeal-") || cName.startsWith("apply-") || cName.startsWith("report-") || cName.startsWith("support-") || cName.startsWith("bug-")) {
+    if(cName.startsWith("appeal-") || cName.startsWith("apply-") || cName.startsWith("report-") || cName.startsWith("help-") || cName.startsWith("bug-")) {
       channel.delete();
     } else {
       return ("Are you sure its a appeal/appeal/report channel?")
