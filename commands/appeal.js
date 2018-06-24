@@ -12,6 +12,15 @@ module.exports.run = async (bot, message) => {
      
     function createChannel() {
         message.guild.createChannel(`appeal-${message.author.username}`, "text").then(channel => {
+        let category = message.guild.channels.find("name", "🎫 Tickets");
+        if(category) {
+            c.setParent(category)
+             .then(updated => console.log(`Set the category of ${channel.name} to ${channel.parent.name}`))
+            .catch(console.error);
+           } else message.reply("Category niet vindbaar.")
+           .then(msg => {
+            msg.delete(5000)
+          })
             let role = message.guild.roles.find("name", "Support Team");
             let role2 = message.guild.roles.find("name", "@everyone");
             channel.overwritePermissions(role, {
@@ -33,44 +42,45 @@ module.exports.run = async (bot, message) => {
 
             let tcreateembed = new Discord.RichEmbed()
             .setTitle("AstroGalaxy Support")
-            .setColor(0xCF40FA)
+            .setColor("#fffff")
             .addField(`${sort} Appeal Ticket`,`${channel}`)
             .addField(`How can I go to my appeal ticket?`, `Click on ${channel}`)
             .setTimestamp()
-            .setFooter(`©AstroGalaxy`, "https://i.imgur.com/E5x69Sn.png");
+            .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
           
             message.channel.send({embed: tcreateembed});
 
             if (args[0] == "ban") {
                 let appealone = new Discord.RichEmbed()
-                    .setColor(0xCF40FA)
+                    .setColor("#ffffff")
                     .setTitle(`Hey ${message.author.username}!`)
                     .setDescription(`
-                    **»This is the format for your appeal. When you are appealing, we expect you to answer all these questions.«**\n\n- What is your Minecraft IGN name?\n- Why were you banned from AstroGalaxy?\n- Who banned you?\n- If you were banned for multiple warnings, why should we unban you?\n- If you were banned for hacking, why should we unban you?\n- If you were banned for another reason, please tell us why we should unban you?\n- If you were hacking, have you uninstalled your hacks?\n- Have you ever donated on the server, if so, what have you purchased?\n- Have you ever been punished on the server before?\n- Have you ever been staff on the server before, if so, what rank were you?\n- Is there anything else we should know?`)
+                    ** »Dit is het formaat voor uw appeal. Als u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \ n \ n- Wat is de naam van uw Minecraft IGN? \ N- Waarom bent u uit ForestMC verbannen? \ N- Wie heeft u verbannen? \ N- je bent verbannen voor meerdere waarschuwingen, waarom zouden we je unbannen? \ n- Als je verbannen werd voor hacken, waarom zouden we je uitbannen? \ n- Als je om een andere reden bent gebanned, vertel ons dan waarom we je moeten ontbinden? n- Als u hackt, heeft u uw hacks dan gedeïnstalleerd? \ n- Hebt u ooit gedoneerd op de server, zo ja, wat heeft u gekocht? \ n- Bent u ooit eerder gestraft op de server? \ n- Hebt u ooit eerder personeel op de server geweest, zo ja, in welke rank was je? \ n- Is er nog iets dat we moeten weten?`)
                     .setTimestamp()
-                    .setFooter(`©AstroGalaxy`, "https://i.imgur.com/E5x69Sn.png");
+                    .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
                 channel.send({embed: appealone});
             }
 
             if (args[0] == "tempban") {
                 let appealtwo = new Discord.RichEmbed()
-                    .setColor(0xCF40FA)
+                    .setColor("#ffffff")
                     .setTitle(`Hey ${message.author.username}!`)
                     .setDescription(`
-                    **»This is the format for your appeal. When you are appealing, we expect you to answer all these questions.«**\n\n- What is your Minecraft IGN name?\n- How much longer are you temp-banned for?\n- Why were you temp-banned on AstroGalaxy?\n- Who temp-banned you?\n- If you were temp-banned for multiple offences, why should we unban you?\n- Have you ever donated on the server, if so, what have you purchased?\n- Have you ever been punished on the server before?\n- Have you ever been staff on the server before, if so, what rank were you?\n- Is there anything else we should know?\n`)
+             ** »Dit is het formaat voor uw appeal. Wanneer u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \ n \ n- Wat is de naam van uw Minecraft IGN? \ N- Hoe lang bent u tijdelijk verbannen? \ N- Waarom was u tijdelijk verbannen op ForestMC? \ n- Wie heeft je tijdelijk verbannen? \ n- Als je voor meerdere delicten tijdelijk bent geblokkeerd, waarom zouden we je uitbannen? \ n- Heb je ooit gedoneerd op de server, zo ja, wat heb je gekocht ? \ n- Bent u ooit eerder op de server gestraft? \ n- Bent u ooit eerder personeel op de server geweest, zo ja, in welke rang was u? \ n- Is er nog iets dat we moeten weten? \ n`)
                     .setTimestamp()
-                    .setFooter(`©AstroGalaxy`, "https://i.imgur.com/E5x69Sn.png");
+                    .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
                 channel.send({embed: appealtwo});
             }
 
             if (args[0] == "mute") {
                 let appealthree = new Discord.RichEmbed()
-                    .setColor(0xCF40FA)
+                    .setColor("#ffffff")
                     .setTitle(`Hey ${message.author.username}!`)
-                    .setDescription(`**»This is the format for your appeal. When you are appealing, we expect you to answer all these questions.«**\n\n- What is your Minecraft IGN name?\n- Why were you muted on AstroGalaxy?\n- Who muted you (If you don't know, leave blank)?\n- If you were muted for multiple mutes, why should we unmute you?\n- Have you ever donated on the server, if so, what have you purchased?\n- Have you ever been punished on the server before?\n- Have you ever been staff on the server before, if so, what rank were you?\n- Is there anything else we should know?\n
+                    .setDescription(`
+** »Dit is het formaat voor uw appeal. Wanneer u in appeal gaat, verwachten we dat u al deze vragen zult beantwoorden. «** \ n \ n- Wat is de naam van uw Minecraft IGN? \ N- Waarom was u gemuted op ForestMC? \ N- Wie heeft u gemuted, Als je het niet weet laat je het leeg)? \ n- Als u gemuted bent voor meerdere keren, waarom zouden we u dan unmuten? \ n- Heeft u ooit gedoneerd op de server, zo ja, wat heeft u gekocht? \ n- Hebt u ooit eerder gestraft op de server? \ n- Bent u ooit eerder personeel op de server geweest, zo ja, in welke rang was u? \ n- Is er nog iets dat we moeten weten? \ n
                     `)
                     .setTimestamp()
-                    .setFooter(`©AstroGalaxy`, "https://i.imgur.com/E5x69Sn.png");
+                    .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
                 channel.send({embed: appealthree});
             }
         });
@@ -78,7 +88,7 @@ module.exports.run = async (bot, message) => {
 
 
     if (!sort) {
-        return message.reply("Invalid usage: -appeal [appeal category]");
+        return message.reply("Verkeerde usage: -appeal [appeal category]");
     } else {
         let channel = message.guild.channels.find(`name`, `appeal-${message.author.username.toLowerCase()}`);
         if (channel) {
