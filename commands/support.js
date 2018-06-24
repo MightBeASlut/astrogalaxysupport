@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     message.guild.createChannel(`help-${message.author.username}`, "text").then(c => {
         let category = message.guild.channels.find("name", "🎫 Tickets");
         if(category) {
-            channel.setParent(category)
+            c.setParent(category)
              .then(updated => console.log(`Set the category of ${channel.name} to ${channel.parent.name}`))
             .catch(console.error);
            } else message.reply("Category niet vindbaar.")
