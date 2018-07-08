@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
             msg.delete(5000)
           })
     }
-    if(cName.startsWith("overige-commands")) {
+    if(cName.startsWith("support")) {
 
     const reason = message.content.split(" ").slice(1).join(" ");
     if (message.guild.channels.exists("name", `help-${message.author.username.toLowerCase()}`)) return message.channel.send(`Je hebt momenteel al een ticket open`);
