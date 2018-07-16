@@ -15,14 +15,14 @@ module.exports.run = async (bot, message, args, member, guild, size) => {
     var msg = message.content;
     var args = msg.split(" ")
     if (!args[1]) return message.channel.send("`Wat is jou nieuwe video/stream?`");
-    let arg = message.content.split(" ").slice(10);
+    let arg = message.content.split(" ").slice(8);
 
     let changelog = message.guild.channels.find('name', 'youtube');
 
     let announcement = new Discord.RichEmbed()
     .setAuthor("ForestMC Announcer")
     .setColor("#ffffff")
-    .setDescription("-" + args.join(" ").slice(10))
+    .setDescription("-" + args.join(" ").slice(8))
     .setTimestamp()
     .setFooter(`© ForestMC`, "https://imgur.com/tfBmDbI.png");
 
