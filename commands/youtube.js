@@ -41,5 +41,5 @@ module.exports.run = async (bot, message, args, member, guild, size) => {
 };
 
 module.exports.help = {
-  name: "changelog"
+  name: "youtube"
 }
