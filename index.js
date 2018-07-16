@@ -343,11 +343,17 @@ if (msg.includes(`.EU`)) {
 }
 
 
+if (msg.includes(`youtube.com`)) {
+ logs.send(linkembed)
+
+}
+	
 if (msg.includes(`.COM`)) {
  message.delete();
  logs.send(linkembed)
 
 }
+	  
 
 if (msg.includes(`.NET`)) {
  message.delete();
